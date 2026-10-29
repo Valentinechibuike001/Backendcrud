@@ -1,9 +1,12 @@
 import {Router} from 'express';
+import {registerUser,loginUser,logOutUser} from '../controllers/user.controller.js';
 
 const router  = Router()
 
 // road linkiing the route to 
-router.route('/register')
+router.route('/register').post(registerUser)
+router.route('/login').post(loginUser);
+router.route('/logout').post(logOutUser);
 
 
 export default router 

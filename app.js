@@ -1,6 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import userRouter from "./Route/user.route.js";
+import postRouter from "./Route/post.route.js";
 
 import dotenv from "dotenv";
 
@@ -24,6 +25,8 @@ app.use(express.json())
 
 // this is the url to the database or the user
 app.use("/api/v1/users", userRouter);
+
+app.use("/api/v1/posts", postRouter);
 
 
 
